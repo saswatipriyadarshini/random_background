@@ -5,3 +5,13 @@
 //     }
 //     return color;
 // }
+
+$(document).ready(function(){
+	function myColor(){
+		return "#" + Math.random().toString(12).slice(2,6);
+	};
+
+	$(".button").on("click", function(){
+		$('body').css("background", myColor());
+	});
+});
